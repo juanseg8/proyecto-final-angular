@@ -1,0 +1,14 @@
+<div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+  <!-- Botones para cada categoría -->
+  <button
+    *ngFor="let category of categories"
+    [ngClass]="{
+      'bg-blue-700 text-white': isSelected(category),
+      'text-gray-900': !isSelected(category)
+    }"
+    (click)="onCategoryChange(category)"
+    class="text-base font-medium px-5 py-2.5 text-center me-3 mb-3 rounded-full"
+  >
+    {{ category.name }}
+  </button>
+</div>

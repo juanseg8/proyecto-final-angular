@@ -1,0 +1,11 @@
+<a
+  routerLink="/cart"
+  class="relative inline-flex items-center text-lg font-medium text-center mr-6"
+>
+  <fa-icon [icon]="faCartShopping" size="2x"></fa-icon>
+  <div
+    class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900"
+  >
+    {{ quantity }}
+  </div>
+</a>

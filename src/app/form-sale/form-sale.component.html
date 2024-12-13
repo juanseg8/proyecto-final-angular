@@ -1,0 +1,79 @@
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+    <h2
+      class="mb-4 text-3xl text-center font-bold text-gray-900 dark:text-white"
+    >
+      Finaliza la compra
+    </h2>
+    <form action="#" [formGroup]="saleForm" (ngSubmit)="onSubmit()">
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+        <div class="sm:col-span-2">
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Nombre</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            formControlName="buyer"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          />
+        </div>
+        <div>
+          <label
+            for="withdraw"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Retira</label
+          >
+          <select
+            id="withdraw"
+            formControlName="withdraw"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          >
+            <option value="false">No</option>
+            <option value="true">Si</option>
+          </select>
+        </div>
+        <div>
+          <label
+            for="paymentMethod"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Metodo de pago</label
+          >
+          <select
+            id="paymentMethod"
+            formControlName="paymentMethod"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          >
+            <option value="cash">Efectivo</option>
+            <option value="transfer">Transferencia</option>
+            <option value="card">Tarjeta</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2" *ngIf="showAddressField">
+          <label
+            for="address"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Direccion e informacion extra</label
+          >
+          <textarea
+            id="adress"
+            formControlName="address"
+            rows="2"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          ></textarea>
+        </div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <button
+          type="submit"
+          class="flex w-2/4 justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Realizar compra
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
